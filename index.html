@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html ng-app="d3DemoApp">
+<html ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title>AngularJS + D3.js</title>
-  <script src="http://d3js.org/d3.v2.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+  <script src="angular-1.2.13/angular.js"></script>
   <script src="app.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <script src="d3.js"></script>
 </head>
-<body ng-controller="AppCtrl">
-  <h1>Github Commit Graph</h1>
+<body>
+  <h1>Directive practice</h1>
+  <div ng-sparkline ng-city="San Francisco" width='400'>
+<h3>Builds trend plot</h3>
 
-  <form ng-submit="getCommitData()">
-    User: <input ng-model="user"></input>
-    Repo: <input ng-model="repo"></input>
-    <input type="submit" value="Get Data">
-    Grouped <input type="checkbox" ng-model="grouped">
-  </form>
-  
-  <p class="error">{{error}}</p>
-  <gh-visualization val="data" grouped="grouped"></gh-visualization>
+</div>
 </body>
 </html>
